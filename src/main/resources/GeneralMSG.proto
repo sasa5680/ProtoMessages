@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "google/protobuf/any.proto";
+option java_package = "com.messageClass";
+
+message General{
+
+	bool routing = 1;
+	string MessageType = 2;
+	repeated google.protobuf.Any innerMSG = 3;
+		
+}
+

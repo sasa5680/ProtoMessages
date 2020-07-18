@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option java_package = "com.C2S";
+
+message C2S_LoginRequest{
+
+	string ID 			= 1;
+	string Type 		= 2;
+	bool reConnection	= 3;
+
+}
