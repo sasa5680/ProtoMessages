@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option java_package = "com.C2S";
+option java_package = "com.sasa5680.ProtoMessages.C2S";
 
 message C2S_LoginRequest{
 

@@ -1,4 +1,4 @@
-package commonIndex;
+package com.sasa5680.CommonIndex;
 
 public class Network {
 	
