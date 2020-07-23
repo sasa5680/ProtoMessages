@@ -10,12 +10,14 @@ message S2C_LoginRequestReturn{
 
 message S2C_DeviceList{
 
-	bool isEndofMSG = 1;
+	int total 		= 1;
+	int current 	= 2;
 	
-	string ID = 2;
-	string Type = 3;
+	string ID    = 3;
+	string Type  = 4;
 	
-	bool con  =  4;
+	bool con     = 5;
 	
+	 	
 
 }
