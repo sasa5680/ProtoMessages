@@ -496,32 +496,37 @@ public final class S2CLoginRequestReturn {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool isEndofMSG = 1;</code>
+     * <code>float total = 1;</code>
      */
-    boolean getIsEndofMSG();
+    float getTotal();
 
     /**
-     * <code>string ID = 2;</code>
+     * <code>float current = 2;</code>
+     */
+    float getCurrent();
+
+    /**
+     * <code>string ID = 3;</code>
      */
     java.lang.String getID();
     /**
-     * <code>string ID = 2;</code>
+     * <code>string ID = 3;</code>
      */
     com.google.protobuf.ByteString
         getIDBytes();
 
     /**
-     * <code>string Type = 3;</code>
+     * <code>string Type = 4;</code>
      */
     java.lang.String getType();
     /**
-     * <code>string Type = 3;</code>
+     * <code>string Type = 4;</code>
      */
     com.google.protobuf.ByteString
         getTypeBytes();
 
     /**
-     * <code>bool con = 4;</code>
+     * <code>bool con = 5;</code>
      */
     boolean getCon();
   }
@@ -538,7 +543,8 @@ public final class S2CLoginRequestReturn {
       super(builder);
     }
     private S2C_DeviceList() {
-      isEndofMSG_ = false;
+      total_ = 0F;
+      current_ = 0F;
       iD_ = "";
       type_ = "";
       con_ = false;
@@ -568,24 +574,29 @@ public final class S2CLoginRequestReturn {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 13: {
 
-              isEndofMSG_ = input.readBool();
+              total_ = input.readFloat();
               break;
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 21: {
 
-              iD_ = s;
+              current_ = input.readFloat();
               break;
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
 
+              iD_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
               type_ = s;
               break;
             }
-            case 32: {
+            case 40: {
 
               con_ = input.readBool();
               break;
@@ -622,19 +633,28 @@ public final class S2CLoginRequestReturn {
               com.sasa5680.ProtoMessages.S2C.S2CLoginRequestReturn.S2C_DeviceList.class, com.sasa5680.ProtoMessages.S2C.S2CLoginRequestReturn.S2C_DeviceList.Builder.class);
     }
 
-    public static final int ISENDOFMSG_FIELD_NUMBER = 1;
-    private boolean isEndofMSG_;
+    public static final int TOTAL_FIELD_NUMBER = 1;
+    private float total_;
     /**
-     * <code>bool isEndofMSG = 1;</code>
+     * <code>float total = 1;</code>
      */
-    public boolean getIsEndofMSG() {
-      return isEndofMSG_;
+    public float getTotal() {
+      return total_;
     }
 
-    public static final int ID_FIELD_NUMBER = 2;
+    public static final int CURRENT_FIELD_NUMBER = 2;
+    private float current_;
+    /**
+     * <code>float current = 2;</code>
+     */
+    public float getCurrent() {
+      return current_;
+    }
+
+    public static final int ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object iD_;
     /**
-     * <code>string ID = 2;</code>
+     * <code>string ID = 3;</code>
      */
     public java.lang.String getID() {
       java.lang.Object ref = iD_;
@@ -649,7 +669,7 @@ public final class S2CLoginRequestReturn {
       }
     }
     /**
-     * <code>string ID = 2;</code>
+     * <code>string ID = 3;</code>
      */
     public com.google.protobuf.ByteString
         getIDBytes() {
@@ -665,10 +685,10 @@ public final class S2CLoginRequestReturn {
       }
     }
 
-    public static final int TYPE_FIELD_NUMBER = 3;
+    public static final int TYPE_FIELD_NUMBER = 4;
     private volatile java.lang.Object type_;
     /**
-     * <code>string Type = 3;</code>
+     * <code>string Type = 4;</code>
      */
     public java.lang.String getType() {
       java.lang.Object ref = type_;
@@ -683,7 +703,7 @@ public final class S2CLoginRequestReturn {
       }
     }
     /**
-     * <code>string Type = 3;</code>
+     * <code>string Type = 4;</code>
      */
     public com.google.protobuf.ByteString
         getTypeBytes() {
@@ -699,10 +719,10 @@ public final class S2CLoginRequestReturn {
       }
     }
 
-    public static final int CON_FIELD_NUMBER = 4;
+    public static final int CON_FIELD_NUMBER = 5;
     private boolean con_;
     /**
-     * <code>bool con = 4;</code>
+     * <code>bool con = 5;</code>
      */
     public boolean getCon() {
       return con_;
@@ -722,17 +742,20 @@ public final class S2CLoginRequestReturn {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (isEndofMSG_ != false) {
-        output.writeBool(1, isEndofMSG_);
+      if (total_ != 0F) {
+        output.writeFloat(1, total_);
+      }
+      if (current_ != 0F) {
+        output.writeFloat(2, current_);
       }
       if (!getIDBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, iD_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, iD_);
       }
       if (!getTypeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, type_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, type_);
       }
       if (con_ != false) {
-        output.writeBool(4, con_);
+        output.writeBool(5, con_);
       }
       unknownFields.writeTo(output);
     }
@@ -743,19 +766,23 @@ public final class S2CLoginRequestReturn {
       if (size != -1) return size;
 
       size = 0;
-      if (isEndofMSG_ != false) {
+      if (total_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, isEndofMSG_);
+          .computeFloatSize(1, total_);
+      }
+      if (current_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(2, current_);
       }
       if (!getIDBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, iD_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, iD_);
       }
       if (!getTypeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, type_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, type_);
       }
       if (con_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, con_);
+          .computeBoolSize(5, con_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -773,8 +800,14 @@ public final class S2CLoginRequestReturn {
       com.sasa5680.ProtoMessages.S2C.S2CLoginRequestReturn.S2C_DeviceList other = (com.sasa5680.ProtoMessages.S2C.S2CLoginRequestReturn.S2C_DeviceList) obj;
 
       boolean result = true;
-      result = result && (getIsEndofMSG()
-          == other.getIsEndofMSG());
+      result = result && (
+          java.lang.Float.floatToIntBits(getTotal())
+          == java.lang.Float.floatToIntBits(
+              other.getTotal()));
+      result = result && (
+          java.lang.Float.floatToIntBits(getCurrent())
+          == java.lang.Float.floatToIntBits(
+              other.getCurrent()));
       result = result && getID()
           .equals(other.getID());
       result = result && getType()
@@ -792,9 +825,12 @@ public final class S2CLoginRequestReturn {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ISENDOFMSG_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsEndofMSG());
+      hash = (37 * hash) + TOTAL_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getTotal());
+      hash = (37 * hash) + CURRENT_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getCurrent());
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getID().hashCode();
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
@@ -935,7 +971,9 @@ public final class S2CLoginRequestReturn {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        isEndofMSG_ = false;
+        total_ = 0F;
+
+        current_ = 0F;
 
         iD_ = "";
 
@@ -969,7 +1007,8 @@ public final class S2CLoginRequestReturn {
       @java.lang.Override
       public com.sasa5680.ProtoMessages.S2C.S2CLoginRequestReturn.S2C_DeviceList buildPartial() {
         com.sasa5680.ProtoMessages.S2C.S2CLoginRequestReturn.S2C_DeviceList result = new com.sasa5680.ProtoMessages.S2C.S2CLoginRequestReturn.S2C_DeviceList(this);
-        result.isEndofMSG_ = isEndofMSG_;
+        result.total_ = total_;
+        result.current_ = current_;
         result.iD_ = iD_;
         result.type_ = type_;
         result.con_ = con_;
@@ -1021,8 +1060,11 @@ public final class S2CLoginRequestReturn {
 
       public Builder mergeFrom(com.sasa5680.ProtoMessages.S2C.S2CLoginRequestReturn.S2C_DeviceList other) {
         if (other == com.sasa5680.ProtoMessages.S2C.S2CLoginRequestReturn.S2C_DeviceList.getDefaultInstance()) return this;
-        if (other.getIsEndofMSG() != false) {
-          setIsEndofMSG(other.getIsEndofMSG());
+        if (other.getTotal() != 0F) {
+          setTotal(other.getTotal());
+        }
+        if (other.getCurrent() != 0F) {
+          setCurrent(other.getCurrent());
         }
         if (!other.getID().isEmpty()) {
           iD_ = other.iD_;
@@ -1064,35 +1106,61 @@ public final class S2CLoginRequestReturn {
         return this;
       }
 
-      private boolean isEndofMSG_ ;
+      private float total_ ;
       /**
-       * <code>bool isEndofMSG = 1;</code>
+       * <code>float total = 1;</code>
        */
-      public boolean getIsEndofMSG() {
-        return isEndofMSG_;
+      public float getTotal() {
+        return total_;
       }
       /**
-       * <code>bool isEndofMSG = 1;</code>
+       * <code>float total = 1;</code>
        */
-      public Builder setIsEndofMSG(boolean value) {
+      public Builder setTotal(float value) {
         
-        isEndofMSG_ = value;
+        total_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool isEndofMSG = 1;</code>
+       * <code>float total = 1;</code>
        */
-      public Builder clearIsEndofMSG() {
+      public Builder clearTotal() {
         
-        isEndofMSG_ = false;
+        total_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float current_ ;
+      /**
+       * <code>float current = 2;</code>
+       */
+      public float getCurrent() {
+        return current_;
+      }
+      /**
+       * <code>float current = 2;</code>
+       */
+      public Builder setCurrent(float value) {
+        
+        current_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float current = 2;</code>
+       */
+      public Builder clearCurrent() {
+        
+        current_ = 0F;
         onChanged();
         return this;
       }
 
       private java.lang.Object iD_ = "";
       /**
-       * <code>string ID = 2;</code>
+       * <code>string ID = 3;</code>
        */
       public java.lang.String getID() {
         java.lang.Object ref = iD_;
@@ -1107,7 +1175,7 @@ public final class S2CLoginRequestReturn {
         }
       }
       /**
-       * <code>string ID = 2;</code>
+       * <code>string ID = 3;</code>
        */
       public com.google.protobuf.ByteString
           getIDBytes() {
@@ -1123,7 +1191,7 @@ public final class S2CLoginRequestReturn {
         }
       }
       /**
-       * <code>string ID = 2;</code>
+       * <code>string ID = 3;</code>
        */
       public Builder setID(
           java.lang.String value) {
@@ -1136,7 +1204,7 @@ public final class S2CLoginRequestReturn {
         return this;
       }
       /**
-       * <code>string ID = 2;</code>
+       * <code>string ID = 3;</code>
        */
       public Builder clearID() {
         
@@ -1145,7 +1213,7 @@ public final class S2CLoginRequestReturn {
         return this;
       }
       /**
-       * <code>string ID = 2;</code>
+       * <code>string ID = 3;</code>
        */
       public Builder setIDBytes(
           com.google.protobuf.ByteString value) {
@@ -1161,7 +1229,7 @@ public final class S2CLoginRequestReturn {
 
       private java.lang.Object type_ = "";
       /**
-       * <code>string Type = 3;</code>
+       * <code>string Type = 4;</code>
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -1176,7 +1244,7 @@ public final class S2CLoginRequestReturn {
         }
       }
       /**
-       * <code>string Type = 3;</code>
+       * <code>string Type = 4;</code>
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -1192,7 +1260,7 @@ public final class S2CLoginRequestReturn {
         }
       }
       /**
-       * <code>string Type = 3;</code>
+       * <code>string Type = 4;</code>
        */
       public Builder setType(
           java.lang.String value) {
@@ -1205,7 +1273,7 @@ public final class S2CLoginRequestReturn {
         return this;
       }
       /**
-       * <code>string Type = 3;</code>
+       * <code>string Type = 4;</code>
        */
       public Builder clearType() {
         
@@ -1214,7 +1282,7 @@ public final class S2CLoginRequestReturn {
         return this;
       }
       /**
-       * <code>string Type = 3;</code>
+       * <code>string Type = 4;</code>
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -1230,13 +1298,13 @@ public final class S2CLoginRequestReturn {
 
       private boolean con_ ;
       /**
-       * <code>bool con = 4;</code>
+       * <code>bool con = 5;</code>
        */
       public boolean getCon() {
         return con_;
       }
       /**
-       * <code>bool con = 4;</code>
+       * <code>bool con = 5;</code>
        */
       public Builder setCon(boolean value) {
         
@@ -1245,7 +1313,7 @@ public final class S2CLoginRequestReturn {
         return this;
       }
       /**
-       * <code>bool con = 4;</code>
+       * <code>bool con = 5;</code>
        */
       public Builder clearCon() {
         
@@ -1326,10 +1394,11 @@ public final class S2CLoginRequestReturn {
   static {
     java.lang.String[] descriptorData = {
       "\n\034S2C_LoginRequestReturn.proto\"(\n\026S2C_Lo" +
-      "ginRequestReturn\022\016\n\006result\030\001 \001(\010\"K\n\016S2C_" +
-      "DeviceList\022\022\n\nisEndofMSG\030\001 \001(\010\022\n\n\002ID\030\002 \001" +
-      "(\t\022\014\n\004Type\030\003 \001(\t\022\013\n\003con\030\004 \001(\010B \n\036com.sas" +
-      "a5680.ProtoMessages.S2Cb\006proto3"
+      "ginRequestReturn\022\016\n\006result\030\001 \001(\010\"W\n\016S2C_" +
+      "DeviceList\022\r\n\005total\030\001 \001(\002\022\017\n\007current\030\002 \001" +
+      "(\002\022\n\n\002ID\030\003 \001(\t\022\014\n\004Type\030\004 \001(\t\022\013\n\003con\030\005 \001(" +
+      "\010B \n\036com.sasa5680.ProtoMessages.S2Cb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1354,7 +1423,7 @@ public final class S2CLoginRequestReturn {
     internal_static_S2C_DeviceList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_S2C_DeviceList_descriptor,
-        new java.lang.String[] { "IsEndofMSG", "ID", "Type", "Con", });
+        new java.lang.String[] { "Total", "Current", "ID", "Type", "Con", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
