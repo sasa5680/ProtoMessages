@@ -22,6 +22,11 @@ public final class S2CLoginRequestReturn {
      * <code>bool result = 1;</code>
      */
     boolean getResult();
+
+    /**
+     * <code>bool AndroidFlag = 2;</code>
+     */
+    boolean getAndroidFlag();
   }
   /**
    * Protobuf type {@code S2C_LoginRequestReturn}
@@ -37,6 +42,7 @@ public final class S2CLoginRequestReturn {
     }
     private S2C_LoginRequestReturn() {
       result_ = false;
+      androidFlag_ = false;
     }
 
     @java.lang.Override
@@ -66,6 +72,11 @@ public final class S2CLoginRequestReturn {
             case 8: {
 
               result_ = input.readBool();
+              break;
+            }
+            case 16: {
+
+              androidFlag_ = input.readBool();
               break;
             }
             default: {
@@ -109,6 +120,15 @@ public final class S2CLoginRequestReturn {
       return result_;
     }
 
+    public static final int ANDROIDFLAG_FIELD_NUMBER = 2;
+    private boolean androidFlag_;
+    /**
+     * <code>bool AndroidFlag = 2;</code>
+     */
+    public boolean getAndroidFlag() {
+      return androidFlag_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -126,6 +146,9 @@ public final class S2CLoginRequestReturn {
       if (result_ != false) {
         output.writeBool(1, result_);
       }
+      if (androidFlag_ != false) {
+        output.writeBool(2, androidFlag_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -138,6 +161,10 @@ public final class S2CLoginRequestReturn {
       if (result_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, result_);
+      }
+      if (androidFlag_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, androidFlag_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -157,6 +184,8 @@ public final class S2CLoginRequestReturn {
       boolean result = true;
       result = result && (getResult()
           == other.getResult());
+      result = result && (getAndroidFlag()
+          == other.getAndroidFlag());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -171,6 +200,9 @@ public final class S2CLoginRequestReturn {
       hash = (37 * hash) + RESULT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getResult());
+      hash = (37 * hash) + ANDROIDFLAG_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAndroidFlag());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -306,6 +338,8 @@ public final class S2CLoginRequestReturn {
         super.clear();
         result_ = false;
 
+        androidFlag_ = false;
+
         return this;
       }
 
@@ -333,6 +367,7 @@ public final class S2CLoginRequestReturn {
       public com.sasa5680.ProtoMessages.S2C.S2CLoginRequestReturn.S2C_LoginRequestReturn buildPartial() {
         com.sasa5680.ProtoMessages.S2C.S2CLoginRequestReturn.S2C_LoginRequestReturn result = new com.sasa5680.ProtoMessages.S2C.S2CLoginRequestReturn.S2C_LoginRequestReturn(this);
         result.result_ = result_;
+        result.androidFlag_ = androidFlag_;
         onBuilt();
         return result;
       }
@@ -383,6 +418,9 @@ public final class S2CLoginRequestReturn {
         if (other == com.sasa5680.ProtoMessages.S2C.S2CLoginRequestReturn.S2C_LoginRequestReturn.getDefaultInstance()) return this;
         if (other.getResult() != false) {
           setResult(other.getResult());
+        }
+        if (other.getAndroidFlag() != false) {
+          setAndroidFlag(other.getAndroidFlag());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -435,6 +473,32 @@ public final class S2CLoginRequestReturn {
       public Builder clearResult() {
         
         result_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean androidFlag_ ;
+      /**
+       * <code>bool AndroidFlag = 2;</code>
+       */
+      public boolean getAndroidFlag() {
+        return androidFlag_;
+      }
+      /**
+       * <code>bool AndroidFlag = 2;</code>
+       */
+      public Builder setAndroidFlag(boolean value) {
+        
+        androidFlag_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool AndroidFlag = 2;</code>
+       */
+      public Builder clearAndroidFlag() {
+        
+        androidFlag_ = false;
         onChanged();
         return this;
       }
@@ -1393,12 +1457,12 @@ public final class S2CLoginRequestReturn {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\034S2C_LoginRequestReturn.proto\"(\n\026S2C_Lo" +
-      "ginRequestReturn\022\016\n\006result\030\001 \001(\010\"W\n\016S2C_" +
-      "DeviceList\022\r\n\005total\030\001 \001(\002\022\017\n\007current\030\002 \001" +
-      "(\002\022\n\n\002ID\030\003 \001(\t\022\014\n\004Type\030\004 \001(\t\022\013\n\003con\030\005 \001(" +
-      "\010B \n\036com.sasa5680.ProtoMessages.S2Cb\006pro" +
-      "to3"
+      "\n\034S2C_LoginRequestReturn.proto\"=\n\026S2C_Lo" +
+      "ginRequestReturn\022\016\n\006result\030\001 \001(\010\022\023\n\013Andr" +
+      "oidFlag\030\002 \001(\010\"W\n\016S2C_DeviceList\022\r\n\005total" +
+      "\030\001 \001(\002\022\017\n\007current\030\002 \001(\002\022\n\n\002ID\030\003 \001(\t\022\014\n\004T" +
+      "ype\030\004 \001(\t\022\013\n\003con\030\005 \001(\010B \n\036com.sasa5680.P" +
+      "rotoMessages.S2Cb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1417,7 +1481,7 @@ public final class S2CLoginRequestReturn {
     internal_static_S2C_LoginRequestReturn_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_S2C_LoginRequestReturn_descriptor,
-        new java.lang.String[] { "Result", });
+        new java.lang.String[] { "Result", "AndroidFlag", });
     internal_static_S2C_DeviceList_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_S2C_DeviceList_fieldAccessorTable = new
