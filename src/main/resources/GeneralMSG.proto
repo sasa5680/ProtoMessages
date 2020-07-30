@@ -3,6 +3,9 @@ syntax = "proto3";
 import "google/protobuf/any.proto";
 option java_package = "com.sasa5680.ProtoMessages";
 
+package GeneralMSG;
+
+
 message General{
 
 	bool routing 						  = 1;

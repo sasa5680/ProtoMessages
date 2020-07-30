@@ -15,7 +15,7 @@ public final class GeneralMSG {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface GeneralOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:General)
+      // @@protoc_insertion_point(interface_extends:GeneralMSG.General)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -58,35 +58,35 @@ public final class GeneralMSG {
         int index);
 
     /**
-     * <code>repeated .RoutingInfo routingInfo = 4;</code>
+     * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
      */
     java.util.List<com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo> 
         getRoutingInfoList();
     /**
-     * <code>repeated .RoutingInfo routingInfo = 4;</code>
+     * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
      */
     com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo getRoutingInfo(int index);
     /**
-     * <code>repeated .RoutingInfo routingInfo = 4;</code>
+     * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
      */
     int getRoutingInfoCount();
     /**
-     * <code>repeated .RoutingInfo routingInfo = 4;</code>
+     * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
      */
     java.util.List<? extends com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfoOrBuilder> 
         getRoutingInfoOrBuilderList();
     /**
-     * <code>repeated .RoutingInfo routingInfo = 4;</code>
+     * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
      */
     com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfoOrBuilder getRoutingInfoOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code General}
+   * Protobuf type {@code GeneralMSG.General}
    */
   public  static final class General extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:General)
+      // @@protoc_insertion_point(message_implements:GeneralMSG.General)
       GeneralOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use General.newBuilder() to construct.
@@ -180,13 +180,13 @@ public final class GeneralMSG {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_General_descriptor;
+      return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_GeneralMSG_General_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_General_fieldAccessorTable
+      return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_GeneralMSG_General_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.sasa5680.ProtoMessages.GeneralMSG.General.class, com.sasa5680.ProtoMessages.GeneralMSG.General.Builder.class);
     }
@@ -273,32 +273,32 @@ public final class GeneralMSG {
     public static final int ROUTINGINFO_FIELD_NUMBER = 4;
     private java.util.List<com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo> routingInfo_;
     /**
-     * <code>repeated .RoutingInfo routingInfo = 4;</code>
+     * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
      */
     public java.util.List<com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo> getRoutingInfoList() {
       return routingInfo_;
     }
     /**
-     * <code>repeated .RoutingInfo routingInfo = 4;</code>
+     * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
      */
     public java.util.List<? extends com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfoOrBuilder> 
         getRoutingInfoOrBuilderList() {
       return routingInfo_;
     }
     /**
-     * <code>repeated .RoutingInfo routingInfo = 4;</code>
+     * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
      */
     public int getRoutingInfoCount() {
       return routingInfo_.size();
     }
     /**
-     * <code>repeated .RoutingInfo routingInfo = 4;</code>
+     * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
      */
     public com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo getRoutingInfo(int index) {
       return routingInfo_.get(index);
     }
     /**
-     * <code>repeated .RoutingInfo routingInfo = 4;</code>
+     * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
      */
     public com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfoOrBuilder getRoutingInfoOrBuilder(
         int index) {
@@ -499,21 +499,21 @@ public final class GeneralMSG {
       return builder;
     }
     /**
-     * Protobuf type {@code General}
+     * Protobuf type {@code GeneralMSG.General}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:General)
+        // @@protoc_insertion_point(builder_implements:GeneralMSG.General)
         com.sasa5680.ProtoMessages.GeneralMSG.GeneralOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_General_descriptor;
+        return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_GeneralMSG_General_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_General_fieldAccessorTable
+        return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_GeneralMSG_General_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.sasa5680.ProtoMessages.GeneralMSG.General.class, com.sasa5680.ProtoMessages.GeneralMSG.General.Builder.class);
       }
@@ -560,7 +560,7 @@ public final class GeneralMSG {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_General_descriptor;
+        return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_GeneralMSG_General_descriptor;
       }
 
       @java.lang.Override
@@ -1088,7 +1088,7 @@ public final class GeneralMSG {
           com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo, com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo.Builder, com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfoOrBuilder> routingInfoBuilder_;
 
       /**
-       * <code>repeated .RoutingInfo routingInfo = 4;</code>
+       * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
        */
       public java.util.List<com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo> getRoutingInfoList() {
         if (routingInfoBuilder_ == null) {
@@ -1098,7 +1098,7 @@ public final class GeneralMSG {
         }
       }
       /**
-       * <code>repeated .RoutingInfo routingInfo = 4;</code>
+       * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
        */
       public int getRoutingInfoCount() {
         if (routingInfoBuilder_ == null) {
@@ -1108,7 +1108,7 @@ public final class GeneralMSG {
         }
       }
       /**
-       * <code>repeated .RoutingInfo routingInfo = 4;</code>
+       * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
        */
       public com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo getRoutingInfo(int index) {
         if (routingInfoBuilder_ == null) {
@@ -1118,7 +1118,7 @@ public final class GeneralMSG {
         }
       }
       /**
-       * <code>repeated .RoutingInfo routingInfo = 4;</code>
+       * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
        */
       public Builder setRoutingInfo(
           int index, com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo value) {
@@ -1135,7 +1135,7 @@ public final class GeneralMSG {
         return this;
       }
       /**
-       * <code>repeated .RoutingInfo routingInfo = 4;</code>
+       * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
        */
       public Builder setRoutingInfo(
           int index, com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo.Builder builderForValue) {
@@ -1149,7 +1149,7 @@ public final class GeneralMSG {
         return this;
       }
       /**
-       * <code>repeated .RoutingInfo routingInfo = 4;</code>
+       * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
        */
       public Builder addRoutingInfo(com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo value) {
         if (routingInfoBuilder_ == null) {
@@ -1165,7 +1165,7 @@ public final class GeneralMSG {
         return this;
       }
       /**
-       * <code>repeated .RoutingInfo routingInfo = 4;</code>
+       * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
        */
       public Builder addRoutingInfo(
           int index, com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo value) {
@@ -1182,7 +1182,7 @@ public final class GeneralMSG {
         return this;
       }
       /**
-       * <code>repeated .RoutingInfo routingInfo = 4;</code>
+       * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
        */
       public Builder addRoutingInfo(
           com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo.Builder builderForValue) {
@@ -1196,7 +1196,7 @@ public final class GeneralMSG {
         return this;
       }
       /**
-       * <code>repeated .RoutingInfo routingInfo = 4;</code>
+       * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
        */
       public Builder addRoutingInfo(
           int index, com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo.Builder builderForValue) {
@@ -1210,7 +1210,7 @@ public final class GeneralMSG {
         return this;
       }
       /**
-       * <code>repeated .RoutingInfo routingInfo = 4;</code>
+       * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
        */
       public Builder addAllRoutingInfo(
           java.lang.Iterable<? extends com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo> values) {
@@ -1225,7 +1225,7 @@ public final class GeneralMSG {
         return this;
       }
       /**
-       * <code>repeated .RoutingInfo routingInfo = 4;</code>
+       * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
        */
       public Builder clearRoutingInfo() {
         if (routingInfoBuilder_ == null) {
@@ -1238,7 +1238,7 @@ public final class GeneralMSG {
         return this;
       }
       /**
-       * <code>repeated .RoutingInfo routingInfo = 4;</code>
+       * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
        */
       public Builder removeRoutingInfo(int index) {
         if (routingInfoBuilder_ == null) {
@@ -1251,14 +1251,14 @@ public final class GeneralMSG {
         return this;
       }
       /**
-       * <code>repeated .RoutingInfo routingInfo = 4;</code>
+       * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
        */
       public com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo.Builder getRoutingInfoBuilder(
           int index) {
         return getRoutingInfoFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .RoutingInfo routingInfo = 4;</code>
+       * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
        */
       public com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfoOrBuilder getRoutingInfoOrBuilder(
           int index) {
@@ -1268,7 +1268,7 @@ public final class GeneralMSG {
         }
       }
       /**
-       * <code>repeated .RoutingInfo routingInfo = 4;</code>
+       * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
        */
       public java.util.List<? extends com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfoOrBuilder> 
            getRoutingInfoOrBuilderList() {
@@ -1279,14 +1279,14 @@ public final class GeneralMSG {
         }
       }
       /**
-       * <code>repeated .RoutingInfo routingInfo = 4;</code>
+       * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
        */
       public com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo.Builder addRoutingInfoBuilder() {
         return getRoutingInfoFieldBuilder().addBuilder(
             com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .RoutingInfo routingInfo = 4;</code>
+       * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
        */
       public com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo.Builder addRoutingInfoBuilder(
           int index) {
@@ -1294,7 +1294,7 @@ public final class GeneralMSG {
             index, com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .RoutingInfo routingInfo = 4;</code>
+       * <code>repeated .GeneralMSG.RoutingInfo routingInfo = 4;</code>
        */
       public java.util.List<com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo.Builder> 
            getRoutingInfoBuilderList() {
@@ -1327,10 +1327,10 @@ public final class GeneralMSG {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:General)
+      // @@protoc_insertion_point(builder_scope:GeneralMSG.General)
     }
 
-    // @@protoc_insertion_point(class_scope:General)
+    // @@protoc_insertion_point(class_scope:GeneralMSG.General)
     private static final com.sasa5680.ProtoMessages.GeneralMSG.General DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.sasa5680.ProtoMessages.GeneralMSG.General();
@@ -1368,7 +1368,7 @@ public final class GeneralMSG {
   }
 
   public interface RoutingInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:RoutingInfo)
+      // @@protoc_insertion_point(interface_extends:GeneralMSG.RoutingInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1412,11 +1412,11 @@ public final class GeneralMSG {
         getDestinationTypeBytes();
   }
   /**
-   * Protobuf type {@code RoutingInfo}
+   * Protobuf type {@code GeneralMSG.RoutingInfo}
    */
   public  static final class RoutingInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:RoutingInfo)
+      // @@protoc_insertion_point(message_implements:GeneralMSG.RoutingInfo)
       RoutingInfoOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use RoutingInfo.newBuilder() to construct.
@@ -1499,13 +1499,13 @@ public final class GeneralMSG {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_RoutingInfo_descriptor;
+      return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_GeneralMSG_RoutingInfo_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_RoutingInfo_fieldAccessorTable
+      return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_GeneralMSG_RoutingInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo.class, com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo.Builder.class);
     }
@@ -1832,21 +1832,21 @@ public final class GeneralMSG {
       return builder;
     }
     /**
-     * Protobuf type {@code RoutingInfo}
+     * Protobuf type {@code GeneralMSG.RoutingInfo}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:RoutingInfo)
+        // @@protoc_insertion_point(builder_implements:GeneralMSG.RoutingInfo)
         com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_RoutingInfo_descriptor;
+        return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_GeneralMSG_RoutingInfo_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_RoutingInfo_fieldAccessorTable
+        return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_GeneralMSG_RoutingInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo.class, com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo.Builder.class);
       }
@@ -1883,7 +1883,7 @@ public final class GeneralMSG {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_RoutingInfo_descriptor;
+        return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_GeneralMSG_RoutingInfo_descriptor;
       }
 
       @java.lang.Override
@@ -2288,10 +2288,10 @@ public final class GeneralMSG {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:RoutingInfo)
+      // @@protoc_insertion_point(builder_scope:GeneralMSG.RoutingInfo)
     }
 
-    // @@protoc_insertion_point(class_scope:RoutingInfo)
+    // @@protoc_insertion_point(class_scope:GeneralMSG.RoutingInfo)
     private static final com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo();
@@ -2329,15 +2329,15 @@ public final class GeneralMSG {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_General_descriptor;
+    internal_static_GeneralMSG_General_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_General_fieldAccessorTable;
+      internal_static_GeneralMSG_General_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_RoutingInfo_descriptor;
+    internal_static_GeneralMSG_RoutingInfo_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_RoutingInfo_fieldAccessorTable;
+      internal_static_GeneralMSG_RoutingInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2347,14 +2347,15 @@ public final class GeneralMSG {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\020GeneralMSG.proto\032\031google/protobuf/any." +
-      "proto\"z\n\007General\022\017\n\007routing\030\001 \001(\010\022\023\n\013Mes" +
-      "sageType\030\002 \001(\t\022&\n\010innerMSG\030\003 \003(\0132\024.googl" +
-      "e.protobuf.Any\022!\n\013routingInfo\030\004 \003(\0132\014.Ro" +
-      "utingInfo\"c\n\013RoutingInfo\022\020\n\010senderID\030\001 \001" +
-      "(\t\022\022\n\nsenderType\030\002 \001(\t\022\025\n\rdestinationId\030" +
-      "\003 \001(\t\022\027\n\017destinationType\030\004 \001(\tB\034\n\032com.sa" +
-      "sa5680.ProtoMessagesb\006proto3"
+      "\n\020GeneralMSG.proto\022\nGeneralMSG\032\031google/p" +
+      "rotobuf/any.proto\"\205\001\n\007General\022\017\n\007routing" +
+      "\030\001 \001(\010\022\023\n\013MessageType\030\002 \001(\t\022&\n\010innerMSG\030" +
+      "\003 \003(\0132\024.google.protobuf.Any\022,\n\013routingIn" +
+      "fo\030\004 \003(\0132\027.GeneralMSG.RoutingInfo\"c\n\013Rou" +
+      "tingInfo\022\020\n\010senderID\030\001 \001(\t\022\022\n\nsenderType" +
+      "\030\002 \001(\t\022\025\n\rdestinationId\030\003 \001(\t\022\027\n\017destina" +
+      "tionType\030\004 \001(\tB\034\n\032com.sasa5680.ProtoMess" +
+      "agesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2369,17 +2370,17 @@ public final class GeneralMSG {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.AnyProto.getDescriptor(),
         }, assigner);
-    internal_static_General_descriptor =
+    internal_static_GeneralMSG_General_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_General_fieldAccessorTable = new
+    internal_static_GeneralMSG_General_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_General_descriptor,
+        internal_static_GeneralMSG_General_descriptor,
         new java.lang.String[] { "Routing", "MessageType", "InnerMSG", "RoutingInfo", });
-    internal_static_RoutingInfo_descriptor =
+    internal_static_GeneralMSG_RoutingInfo_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_RoutingInfo_fieldAccessorTable = new
+    internal_static_GeneralMSG_RoutingInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_RoutingInfo_descriptor,
+        internal_static_GeneralMSG_RoutingInfo_descriptor,
         new java.lang.String[] { "SenderID", "SenderType", "DestinationId", "DestinationType", });
     com.google.protobuf.AnyProto.getDescriptor();
   }

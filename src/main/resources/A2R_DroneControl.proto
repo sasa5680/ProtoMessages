@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+
+option java_package = "com.sasa5680.ProtoMessages.A2R";
+
+import "GeneralMSG.proto";
+
+
+message A2R_DroneControl{
+	
+	bool Roll_L        = 1;
+	bool Roll_R        = 2;
+	
+	bool Pitch_F       = 3;
+	bool Pitch_B       = 4;
+	
+	bool Yaw_CW        = 5;
+	bool Yaw_CCW  	   = 6;
+
+	bool Throttle_UP   = 7;
+	bool Throttle_Down = 8;
+	
+	repeated GeneralMSG.RoutingInfo routingInfo = 9;
+
+
+}

@@ -13,13 +13,10 @@ public class MessageWrapper {
 		Any any = Any.pack(inner);
 		General msg = General.newBuilder()
 							 .addInnerMSG(any)
-							 .setMessageType(inner.getClass().getName())
+							 .setMessageType(inner.getClass().getSimpleName())
 							 .setRouting(false)
 							 .build();
 		return msg;
-		
-		
-		
 	}
 	
 	public static General Wrap_Routing(com.google.protobuf.Message inner, RoutingInfo RI) {
@@ -28,12 +25,11 @@ public class MessageWrapper {
 		
 		General msg = General.newBuilder()
 				 			 .addInnerMSG(any)
-				 			 .setMessageType(inner.getClass().getName())
+				 			 .setMessageType(inner.getClass().getSimpleName())
 				 			 .addRoutingInfo(RI)
 				 			 .setRouting(true)
 				 			 .build();
 		
 		return msg;
-		
 	}
 }

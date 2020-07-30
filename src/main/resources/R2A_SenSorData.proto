@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_package = "com.sasa5680.ProtoMessages.R2A";
+
+message R2A_SenSorData{
+	
+	//repeated RoutingInfo = 1;
+	
+	string GPS     = 2;
+	float battery  = 3;
+	float altitude = 4;
+	
+	
+
+}

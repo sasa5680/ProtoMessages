@@ -57,6 +57,7 @@
 							<inputDirectories>
 								<include>src/main/resources</include>
 								<include>src/Messages/S2C</include>
+								
 							</inputDirectories>
 							
 							<outputTargets>

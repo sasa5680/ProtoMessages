@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+
+option java_package = "com.sasa5680.ProtoMessages.A2R";
+import "GeneralMSG.proto";
+
+message A2R_VidedoRequest{
+	
+	repeated GeneralMSG.RoutingInfo routingInfo = 1;
+
+}

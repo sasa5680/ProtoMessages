@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option java_package = "com.sasa5680.ProtoMessages.R2A";
+
+message R2A_VidedoRequestReturn{
+	
+	bool result      = 1;
+	string VideoUrl  = 2;
+}
