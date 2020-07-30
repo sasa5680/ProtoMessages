@@ -13,26 +13,6 @@ public class Main {
 		
 	public static void main(String args[])  {
 		
-		RoutingInfo info = RoutingInfo.newBuilder().setDestinationId("111").build();
-		A2R_DroneControl msg = A2R_DroneControl.newBuilder().addRoutingInfo(info).build();
-		
-		
-		
-		General g = MessageWrapper.Wrap_Routing(msg, info);
-		
-		A2R_DroneControl msg2;
-		try {
-			msg2 = g.getInnerMSG(0).unpack(A2R_DroneControl.class);
-			
-			System.out.println(g.getMessageType());
-			System.out.println(msg2.getRoutingInfo(0).getDestinationId());
-			
-			System.out.println(msg2.getRoutingInfo(0).getDestinationType());
-			
-		} catch (InvalidProtocolBufferException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 
 		
 	}
