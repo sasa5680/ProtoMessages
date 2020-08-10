@@ -9,5 +9,8 @@ public class Network {
 	public static final int port = 8001;
 	
 	public static final String IP = "127.0.0.1";
+	
+	//percentage
+	public static final int NetUnstableRatio = 85;
 
 }
