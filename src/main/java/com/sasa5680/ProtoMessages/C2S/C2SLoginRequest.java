@@ -42,6 +42,16 @@ public final class C2SLoginRequest {
      * <code>bool reConnection = 3;</code>
      */
     boolean getReConnection();
+
+    /**
+     * <code>string IP = 4;</code>
+     */
+    java.lang.String getIP();
+    /**
+     * <code>string IP = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getIPBytes();
   }
   /**
    * Protobuf type {@code C2S_LoginRequest}
@@ -59,6 +69,7 @@ public final class C2SLoginRequest {
       iD_ = "";
       type_ = "";
       reConnection_ = false;
+      iP_ = "";
     }
 
     @java.lang.Override
@@ -100,6 +111,12 @@ public final class C2SLoginRequest {
             case 24: {
 
               reConnection_ = input.readBool();
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              iP_ = s;
               break;
             }
             default: {
@@ -211,6 +228,40 @@ public final class C2SLoginRequest {
       return reConnection_;
     }
 
+    public static final int IP_FIELD_NUMBER = 4;
+    private volatile java.lang.Object iP_;
+    /**
+     * <code>string IP = 4;</code>
+     */
+    public java.lang.String getIP() {
+      java.lang.Object ref = iP_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        iP_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string IP = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIPBytes() {
+      java.lang.Object ref = iP_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        iP_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -234,6 +285,9 @@ public final class C2SLoginRequest {
       if (reConnection_ != false) {
         output.writeBool(3, reConnection_);
       }
+      if (!getIPBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, iP_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -252,6 +306,9 @@ public final class C2SLoginRequest {
       if (reConnection_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, reConnection_);
+      }
+      if (!getIPBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, iP_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -275,6 +332,8 @@ public final class C2SLoginRequest {
           .equals(other.getType());
       result = result && (getReConnection()
           == other.getReConnection());
+      result = result && getIP()
+          .equals(other.getIP());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -293,6 +352,8 @@ public final class C2SLoginRequest {
       hash = (37 * hash) + RECONNECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getReConnection());
+      hash = (37 * hash) + IP_FIELD_NUMBER;
+      hash = (53 * hash) + getIP().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -432,6 +493,8 @@ public final class C2SLoginRequest {
 
         reConnection_ = false;
 
+        iP_ = "";
+
         return this;
       }
 
@@ -461,6 +524,7 @@ public final class C2SLoginRequest {
         result.iD_ = iD_;
         result.type_ = type_;
         result.reConnection_ = reConnection_;
+        result.iP_ = iP_;
         onBuilt();
         return result;
       }
@@ -519,6 +583,10 @@ public final class C2SLoginRequest {
         }
         if (other.getReConnection() != false) {
           setReConnection(other.getReConnection());
+        }
+        if (!other.getIP().isEmpty()) {
+          iP_ = other.iP_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -712,6 +780,75 @@ public final class C2SLoginRequest {
         onChanged();
         return this;
       }
+
+      private java.lang.Object iP_ = "";
+      /**
+       * <code>string IP = 4;</code>
+       */
+      public java.lang.String getIP() {
+        java.lang.Object ref = iP_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          iP_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string IP = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIPBytes() {
+        java.lang.Object ref = iP_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          iP_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string IP = 4;</code>
+       */
+      public Builder setIP(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        iP_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string IP = 4;</code>
+       */
+      public Builder clearIP() {
+        
+        iP_ = getDefaultInstance().getIP();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string IP = 4;</code>
+       */
+      public Builder setIPBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        iP_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -779,10 +916,10 @@ public final class C2SLoginRequest {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\026C2S_LoginRequest.proto\"B\n\020C2S_LoginReq" +
+      "\n\026C2S_LoginRequest.proto\"N\n\020C2S_LoginReq" +
       "uest\022\n\n\002ID\030\001 \001(\t\022\014\n\004Type\030\002 \001(\t\022\024\n\014reConn" +
-      "ection\030\003 \001(\010B \n\036com.sasa5680.ProtoMessag" +
-      "es.C2Sb\006proto3"
+      "ection\030\003 \001(\010\022\n\n\002IP\030\004 \001(\tB \n\036com.sasa5680" +
+      ".ProtoMessages.C2Sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -801,7 +938,7 @@ public final class C2SLoginRequest {
     internal_static_C2S_LoginRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_C2S_LoginRequest_descriptor,
-        new java.lang.String[] { "ID", "Type", "ReConnection", });
+        new java.lang.String[] { "ID", "Type", "ReConnection", "IP", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

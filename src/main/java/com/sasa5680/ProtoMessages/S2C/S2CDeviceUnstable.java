@@ -14,8 +14,8 @@ public final class S2CDeviceUnstable {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface S2C_DeviceUnstableOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:S2C_DeviceUnstable)
+  public interface S2C_NotifyNetStatueOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:S2C_NotifyNetStatue)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -37,22 +37,33 @@ public final class S2CDeviceUnstable {
      */
     com.google.protobuf.ByteString
         getTypeBytes();
+
+    /**
+     * <code>string code = 3;</code>
+     */
+    java.lang.String getCode();
+    /**
+     * <code>string code = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getCodeBytes();
   }
   /**
-   * Protobuf type {@code S2C_DeviceUnstable}
+   * Protobuf type {@code S2C_NotifyNetStatue}
    */
-  public  static final class S2C_DeviceUnstable extends
+  public  static final class S2C_NotifyNetStatue extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:S2C_DeviceUnstable)
-      S2C_DeviceUnstableOrBuilder {
+      // @@protoc_insertion_point(message_implements:S2C_NotifyNetStatue)
+      S2C_NotifyNetStatueOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use S2C_DeviceUnstable.newBuilder() to construct.
-    private S2C_DeviceUnstable(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use S2C_NotifyNetStatue.newBuilder() to construct.
+    private S2C_NotifyNetStatue(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private S2C_DeviceUnstable() {
+    private S2C_NotifyNetStatue() {
       iD_ = "";
       type_ = "";
+      code_ = "";
     }
 
     @java.lang.Override
@@ -60,7 +71,7 @@ public final class S2CDeviceUnstable {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private S2C_DeviceUnstable(
+    private S2C_NotifyNetStatue(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -91,6 +102,12 @@ public final class S2CDeviceUnstable {
               type_ = s;
               break;
             }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              code_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -112,15 +129,15 @@ public final class S2CDeviceUnstable {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.internal_static_S2C_DeviceUnstable_descriptor;
+      return com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.internal_static_S2C_NotifyNetStatue_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.internal_static_S2C_DeviceUnstable_fieldAccessorTable
+      return com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.internal_static_S2C_NotifyNetStatue_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable.class, com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable.Builder.class);
+              com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue.class, com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -191,6 +208,40 @@ public final class S2CDeviceUnstable {
       }
     }
 
+    public static final int CODE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object code_;
+    /**
+     * <code>string code = 3;</code>
+     */
+    public java.lang.String getCode() {
+      java.lang.Object ref = code_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        code_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string code = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCodeBytes() {
+      java.lang.Object ref = code_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        code_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -211,6 +262,9 @@ public final class S2CDeviceUnstable {
       if (!getTypeBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
       }
+      if (!getCodeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, code_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -226,6 +280,9 @@ public final class S2CDeviceUnstable {
       if (!getTypeBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
       }
+      if (!getCodeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, code_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -236,16 +293,18 @@ public final class S2CDeviceUnstable {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable)) {
+      if (!(obj instanceof com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue)) {
         return super.equals(obj);
       }
-      com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable other = (com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable) obj;
+      com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue other = (com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue) obj;
 
       boolean result = true;
       result = result && getID()
           .equals(other.getID());
       result = result && getType()
           .equals(other.getType());
+      result = result && getCode()
+          .equals(other.getCode());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -261,74 +320,76 @@ public final class S2CDeviceUnstable {
       hash = (53 * hash) + getID().hashCode();
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getType().hashCode();
+      hash = (37 * hash) + CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getCode().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable parseFrom(
+    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable parseFrom(
+    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable parseFrom(
+    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable parseFrom(
+    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable parseFrom(byte[] data)
+    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable parseFrom(
+    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable parseFrom(java.io.InputStream input)
+    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable parseFrom(
+    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable parseDelimitedFrom(java.io.InputStream input)
+    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable parseDelimitedFrom(
+    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable parseFrom(
+    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable parseFrom(
+    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -341,7 +402,7 @@ public final class S2CDeviceUnstable {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable prototype) {
+    public static Builder newBuilder(com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -357,26 +418,26 @@ public final class S2CDeviceUnstable {
       return builder;
     }
     /**
-     * Protobuf type {@code S2C_DeviceUnstable}
+     * Protobuf type {@code S2C_NotifyNetStatue}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:S2C_DeviceUnstable)
-        com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstableOrBuilder {
+        // @@protoc_insertion_point(builder_implements:S2C_NotifyNetStatue)
+        com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatueOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.internal_static_S2C_DeviceUnstable_descriptor;
+        return com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.internal_static_S2C_NotifyNetStatue_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.internal_static_S2C_DeviceUnstable_fieldAccessorTable
+        return com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.internal_static_S2C_NotifyNetStatue_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable.class, com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable.Builder.class);
+                com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue.class, com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue.Builder.class);
       }
 
-      // Construct using com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable.newBuilder()
+      // Construct using com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -398,23 +459,25 @@ public final class S2CDeviceUnstable {
 
         type_ = "";
 
+        code_ = "";
+
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.internal_static_S2C_DeviceUnstable_descriptor;
+        return com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.internal_static_S2C_NotifyNetStatue_descriptor;
       }
 
       @java.lang.Override
-      public com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable getDefaultInstanceForType() {
-        return com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable.getDefaultInstance();
+      public com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue getDefaultInstanceForType() {
+        return com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable build() {
-        com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable result = buildPartial();
+      public com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue build() {
+        com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -422,10 +485,11 @@ public final class S2CDeviceUnstable {
       }
 
       @java.lang.Override
-      public com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable buildPartial() {
-        com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable result = new com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable(this);
+      public com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue buildPartial() {
+        com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue result = new com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue(this);
         result.iD_ = iD_;
         result.type_ = type_;
+        result.code_ = code_;
         onBuilt();
         return result;
       }
@@ -464,22 +528,26 @@ public final class S2CDeviceUnstable {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable) {
-          return mergeFrom((com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable)other);
+        if (other instanceof com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue) {
+          return mergeFrom((com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable other) {
-        if (other == com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue other) {
+        if (other == com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue.getDefaultInstance()) return this;
         if (!other.getID().isEmpty()) {
           iD_ = other.iD_;
           onChanged();
         }
         if (!other.getType().isEmpty()) {
           type_ = other.type_;
+          onChanged();
+        }
+        if (!other.getCode().isEmpty()) {
+          code_ = other.code_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -497,11 +565,11 @@ public final class S2CDeviceUnstable {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable parsedMessage = null;
+        com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable) e.getUnfinishedMessage();
+          parsedMessage = (com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -648,6 +716,75 @@ public final class S2CDeviceUnstable {
         onChanged();
         return this;
       }
+
+      private java.lang.Object code_ = "";
+      /**
+       * <code>string code = 3;</code>
+       */
+      public java.lang.String getCode() {
+        java.lang.Object ref = code_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          code_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string code = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCodeBytes() {
+        java.lang.Object ref = code_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          code_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string code = 3;</code>
+       */
+      public Builder setCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        code_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string code = 3;</code>
+       */
+      public Builder clearCode() {
+        
+        code_ = getDefaultInstance().getCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string code = 3;</code>
+       */
+      public Builder setCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        code_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -661,51 +798,51 @@ public final class S2CDeviceUnstable {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:S2C_DeviceUnstable)
+      // @@protoc_insertion_point(builder_scope:S2C_NotifyNetStatue)
     }
 
-    // @@protoc_insertion_point(class_scope:S2C_DeviceUnstable)
-    private static final com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:S2C_NotifyNetStatue)
+    private static final com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable();
+      DEFAULT_INSTANCE = new com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue();
     }
 
-    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable getDefaultInstance() {
+    public static com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<S2C_DeviceUnstable>
-        PARSER = new com.google.protobuf.AbstractParser<S2C_DeviceUnstable>() {
+    private static final com.google.protobuf.Parser<S2C_NotifyNetStatue>
+        PARSER = new com.google.protobuf.AbstractParser<S2C_NotifyNetStatue>() {
       @java.lang.Override
-      public S2C_DeviceUnstable parsePartialFrom(
+      public S2C_NotifyNetStatue parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new S2C_DeviceUnstable(input, extensionRegistry);
+        return new S2C_NotifyNetStatue(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<S2C_DeviceUnstable> parser() {
+    public static com.google.protobuf.Parser<S2C_NotifyNetStatue> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<S2C_DeviceUnstable> getParserForType() {
+    public com.google.protobuf.Parser<S2C_NotifyNetStatue> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_DeviceUnstable getDefaultInstanceForType() {
+    public com.sasa5680.ProtoMessages.S2C.S2CDeviceUnstable.S2C_NotifyNetStatue getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_S2C_DeviceUnstable_descriptor;
+    internal_static_S2C_NotifyNetStatue_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_S2C_DeviceUnstable_fieldAccessorTable;
+      internal_static_S2C_NotifyNetStatue_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -715,9 +852,10 @@ public final class S2CDeviceUnstable {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\030S2C_DeviceUnstable.proto\".\n\022S2C_Device" +
-      "Unstable\022\n\n\002ID\030\001 \001(\t\022\014\n\004type\030\002 \001(\tB \n\036co" +
-      "m.sasa5680.ProtoMessages.S2Cb\006proto3"
+      "\n\030S2C_DeviceUnstable.proto\"=\n\023S2C_Notify" +
+      "NetStatue\022\n\n\002ID\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\014\n\004c" +
+      "ode\030\003 \001(\tB \n\036com.sasa5680.ProtoMessages." +
+      "S2Cb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -731,12 +869,12 @@ public final class S2CDeviceUnstable {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_S2C_DeviceUnstable_descriptor =
+    internal_static_S2C_NotifyNetStatue_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_S2C_DeviceUnstable_fieldAccessorTable = new
+    internal_static_S2C_NotifyNetStatue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_S2C_DeviceUnstable_descriptor,
-        new java.lang.String[] { "ID", "Type", });
+        internal_static_S2C_NotifyNetStatue_descriptor,
+        new java.lang.String[] { "ID", "Type", "Code", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
