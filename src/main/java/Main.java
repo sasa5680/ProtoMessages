@@ -13,11 +13,19 @@ import com.sasa5680.ProtoMessages.C2S.C2SLoginRequest.C2S_LoginRequest;
 public class Main {
 	
 
-		
+	
 	public static void main(String args[])  {
 		
-
-	
+		
+		parent class1 = new child1();
+		parent class2 = new child1();
+		
+		
+		System.out.println(class1.getClass().getSimpleName().equals(class2.getClass().getSimpleName()));
+			
 	}
+	
+	
+
 
 }

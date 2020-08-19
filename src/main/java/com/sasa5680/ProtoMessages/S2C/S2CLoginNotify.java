@@ -39,7 +39,17 @@ public final class S2CLoginNotify {
         getTypeBytes();
 
     /**
-     * <code>bool reLogin = 3;</code>
+     * <code>string IP = 3;</code>
+     */
+    java.lang.String getIP();
+    /**
+     * <code>string IP = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getIPBytes();
+
+    /**
+     * <code>bool reLogin = 4;</code>
      */
     boolean getReLogin();
   }
@@ -58,6 +68,7 @@ public final class S2CLoginNotify {
     private S2C_NewDeviceNotify() {
       iD_ = "";
       type_ = "";
+      iP_ = "";
       reLogin_ = false;
     }
 
@@ -97,7 +108,13 @@ public final class S2CLoginNotify {
               type_ = s;
               break;
             }
-            case 24: {
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              iP_ = s;
+              break;
+            }
+            case 32: {
 
               reLogin_ = input.readBool();
               break;
@@ -202,10 +219,44 @@ public final class S2CLoginNotify {
       }
     }
 
-    public static final int RELOGIN_FIELD_NUMBER = 3;
+    public static final int IP_FIELD_NUMBER = 3;
+    private volatile java.lang.Object iP_;
+    /**
+     * <code>string IP = 3;</code>
+     */
+    public java.lang.String getIP() {
+      java.lang.Object ref = iP_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        iP_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string IP = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIPBytes() {
+      java.lang.Object ref = iP_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        iP_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RELOGIN_FIELD_NUMBER = 4;
     private boolean reLogin_;
     /**
-     * <code>bool reLogin = 3;</code>
+     * <code>bool reLogin = 4;</code>
      */
     public boolean getReLogin() {
       return reLogin_;
@@ -231,8 +282,11 @@ public final class S2CLoginNotify {
       if (!getTypeBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
       }
+      if (!getIPBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, iP_);
+      }
       if (reLogin_ != false) {
-        output.writeBool(3, reLogin_);
+        output.writeBool(4, reLogin_);
       }
       unknownFields.writeTo(output);
     }
@@ -249,9 +303,12 @@ public final class S2CLoginNotify {
       if (!getTypeBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
       }
+      if (!getIPBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, iP_);
+      }
       if (reLogin_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, reLogin_);
+          .computeBoolSize(4, reLogin_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -273,6 +330,8 @@ public final class S2CLoginNotify {
           .equals(other.getID());
       result = result && getType()
           .equals(other.getType());
+      result = result && getIP()
+          .equals(other.getIP());
       result = result && (getReLogin()
           == other.getReLogin());
       result = result && unknownFields.equals(other.unknownFields);
@@ -290,6 +349,8 @@ public final class S2CLoginNotify {
       hash = (53 * hash) + getID().hashCode();
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getType().hashCode();
+      hash = (37 * hash) + IP_FIELD_NUMBER;
+      hash = (53 * hash) + getIP().hashCode();
       hash = (37 * hash) + RELOGIN_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getReLogin());
@@ -430,6 +491,8 @@ public final class S2CLoginNotify {
 
         type_ = "";
 
+        iP_ = "";
+
         reLogin_ = false;
 
         return this;
@@ -460,6 +523,7 @@ public final class S2CLoginNotify {
         com.sasa5680.ProtoMessages.S2C.S2CLoginNotify.S2C_NewDeviceNotify result = new com.sasa5680.ProtoMessages.S2C.S2CLoginNotify.S2C_NewDeviceNotify(this);
         result.iD_ = iD_;
         result.type_ = type_;
+        result.iP_ = iP_;
         result.reLogin_ = reLogin_;
         onBuilt();
         return result;
@@ -515,6 +579,10 @@ public final class S2CLoginNotify {
         }
         if (!other.getType().isEmpty()) {
           type_ = other.type_;
+          onChanged();
+        }
+        if (!other.getIP().isEmpty()) {
+          iP_ = other.iP_;
           onChanged();
         }
         if (other.getReLogin() != false) {
@@ -687,15 +755,84 @@ public final class S2CLoginNotify {
         return this;
       }
 
+      private java.lang.Object iP_ = "";
+      /**
+       * <code>string IP = 3;</code>
+       */
+      public java.lang.String getIP() {
+        java.lang.Object ref = iP_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          iP_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string IP = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIPBytes() {
+        java.lang.Object ref = iP_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          iP_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string IP = 3;</code>
+       */
+      public Builder setIP(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        iP_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string IP = 3;</code>
+       */
+      public Builder clearIP() {
+        
+        iP_ = getDefaultInstance().getIP();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string IP = 3;</code>
+       */
+      public Builder setIPBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        iP_ = value;
+        onChanged();
+        return this;
+      }
+
       private boolean reLogin_ ;
       /**
-       * <code>bool reLogin = 3;</code>
+       * <code>bool reLogin = 4;</code>
        */
       public boolean getReLogin() {
         return reLogin_;
       }
       /**
-       * <code>bool reLogin = 3;</code>
+       * <code>bool reLogin = 4;</code>
        */
       public Builder setReLogin(boolean value) {
         
@@ -704,7 +841,7 @@ public final class S2CLoginNotify {
         return this;
       }
       /**
-       * <code>bool reLogin = 3;</code>
+       * <code>bool reLogin = 4;</code>
        */
       public Builder clearReLogin() {
         
@@ -779,10 +916,10 @@ public final class S2CLoginNotify {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025S2C_LoginNotify.proto\"@\n\023S2C_NewDevice" +
-      "Notify\022\n\n\002ID\030\001 \001(\t\022\014\n\004Type\030\002 \001(\t\022\017\n\007reLo" +
-      "gin\030\003 \001(\010B \n\036com.sasa5680.ProtoMessages." +
-      "S2Cb\006proto3"
+      "\n\025S2C_LoginNotify.proto\"L\n\023S2C_NewDevice" +
+      "Notify\022\n\n\002ID\030\001 \001(\t\022\014\n\004Type\030\002 \001(\t\022\n\n\002IP\030\003" +
+      " \001(\t\022\017\n\007reLogin\030\004 \001(\010B \n\036com.sasa5680.Pr" +
+      "otoMessages.S2Cb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -801,7 +938,7 @@ public final class S2CLoginNotify {
     internal_static_S2C_NewDeviceNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_S2C_NewDeviceNotify_descriptor,
-        new java.lang.String[] { "ID", "Type", "ReLogin", });
+        new java.lang.String[] { "ID", "Type", "IP", "ReLogin", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
