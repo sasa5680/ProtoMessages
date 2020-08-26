@@ -23,3 +23,10 @@ message RoutingInfo{
 	string destinationType  = 4;
 
 }
+
+message order{
+
+	float total		= 1;
+	float current 	= 2;
+
+}
