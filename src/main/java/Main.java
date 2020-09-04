@@ -17,11 +17,12 @@ public class Main {
 	public static void main(String args[])  {
 		
 		
-		parent class1 = new child1();
-		parent class2 = new child1();
+		Calendar cal = Calendar.getInstance();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String Time = sdf.format(cal.getTime());
+		System.out.println(Time);
 		
 		
-		System.out.println(class1.getClass().getSimpleName().equals(class2.getClass().getSimpleName()));
 			
 	}
 	
