@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_package = "com.sasa5680.ProtoMessages.S2C";
+
+message S2C_AndroidLoadingMSG{
+	
+	
+	//Message Info
+	string DroneID 		  = 3;
+	bool ConnectionStatue = 4; 
+	
+
+
+}

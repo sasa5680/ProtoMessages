@@ -30,3 +30,19 @@ message order{
 	float current 	= 2;
 
 }
+
+message SessionStart {
+
+	int32 total_Num = 1;
+	int32 est_time  = 2;
+	string MessageType = 3;
+	bool resultOption = 4;
+
+}
+
+message Sessionresult {
+
+	string MessageType = 1;
+	bool result = 2;
+
+}
