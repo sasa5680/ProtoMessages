@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_package = "com.sasa5680.ProtoMessages.R2A";
+
+message D2A_DeviceData{
+
+	float delay 	= 1;
+	float altitude 	= 2;
+	float battery   = 3;
+	string GPS		= 4;
+	
+
+}
