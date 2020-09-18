@@ -80,6 +80,11 @@ public final class GeneralMSG {
      */
     com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfoOrBuilder getRoutingInfoOrBuilder(
         int index);
+
+    /**
+     * <code>bool StoreOption = 5;</code>
+     */
+    boolean getStoreOption();
   }
   /**
    * Protobuf type {@code GeneralMSG.General}
@@ -98,6 +103,7 @@ public final class GeneralMSG {
       messageType_ = "";
       innerMSG_ = java.util.Collections.emptyList();
       routingInfo_ = java.util.Collections.emptyList();
+      storeOption_ = false;
     }
 
     @java.lang.Override
@@ -151,6 +157,11 @@ public final class GeneralMSG {
               }
               routingInfo_.add(
                   input.readMessage(com.sasa5680.ProtoMessages.GeneralMSG.RoutingInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 40: {
+
+              storeOption_ = input.readBool();
               break;
             }
             default: {
@@ -305,6 +316,15 @@ public final class GeneralMSG {
       return routingInfo_.get(index);
     }
 
+    public static final int STOREOPTION_FIELD_NUMBER = 5;
+    private boolean storeOption_;
+    /**
+     * <code>bool StoreOption = 5;</code>
+     */
+    public boolean getStoreOption() {
+      return storeOption_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -331,6 +351,9 @@ public final class GeneralMSG {
       for (int i = 0; i < routingInfo_.size(); i++) {
         output.writeMessage(4, routingInfo_.get(i));
       }
+      if (storeOption_ != false) {
+        output.writeBool(5, storeOption_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -354,6 +377,10 @@ public final class GeneralMSG {
       for (int i = 0; i < routingInfo_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, routingInfo_.get(i));
+      }
+      if (storeOption_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, storeOption_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -379,6 +406,8 @@ public final class GeneralMSG {
           .equals(other.getInnerMSGList());
       result = result && getRoutingInfoList()
           .equals(other.getRoutingInfoList());
+      result = result && (getStoreOption()
+          == other.getStoreOption());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -403,6 +432,9 @@ public final class GeneralMSG {
         hash = (37 * hash) + ROUTINGINFO_FIELD_NUMBER;
         hash = (53 * hash) + getRoutingInfoList().hashCode();
       }
+      hash = (37 * hash) + STOREOPTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getStoreOption());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -554,6 +586,8 @@ public final class GeneralMSG {
         } else {
           routingInfoBuilder_.clear();
         }
+        storeOption_ = false;
+
         return this;
       }
 
@@ -602,6 +636,7 @@ public final class GeneralMSG {
         } else {
           result.routingInfo_ = routingInfoBuilder_.build();
         }
+        result.storeOption_ = storeOption_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -709,6 +744,9 @@ public final class GeneralMSG {
               routingInfoBuilder_.addAllMessages(other.routingInfo_);
             }
           }
+        }
+        if (other.getStoreOption() != false) {
+          setStoreOption(other.getStoreOption());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1313,6 +1351,32 @@ public final class GeneralMSG {
           routingInfo_ = null;
         }
         return routingInfoBuilder_;
+      }
+
+      private boolean storeOption_ ;
+      /**
+       * <code>bool StoreOption = 5;</code>
+       */
+      public boolean getStoreOption() {
+        return storeOption_;
+      }
+      /**
+       * <code>bool StoreOption = 5;</code>
+       */
+      public Builder setStoreOption(boolean value) {
+        
+        storeOption_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool StoreOption = 5;</code>
+       */
+      public Builder clearStoreOption() {
+        
+        storeOption_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4262,19 +4326,19 @@ public final class GeneralMSG {
   static {
     java.lang.String[] descriptorData = {
       "\n\020GeneralMSG.proto\022\nGeneralMSG\032\031google/p" +
-      "rotobuf/any.proto\"\205\001\n\007General\022\017\n\007routing" +
+      "rotobuf/any.proto\"\232\001\n\007General\022\017\n\007routing" +
       "\030\001 \001(\010\022\023\n\013MessageType\030\002 \001(\t\022&\n\010innerMSG\030" +
       "\003 \003(\0132\024.google.protobuf.Any\022,\n\013routingIn" +
-      "fo\030\004 \003(\0132\027.GeneralMSG.RoutingInfo\"c\n\013Rou" +
-      "tingInfo\022\020\n\010senderID\030\001 \001(\t\022\022\n\nsenderType" +
-      "\030\002 \001(\t\022\025\n\rdestinationId\030\003 \001(\t\022\027\n\017destina" +
-      "tionType\030\004 \001(\t\"\'\n\005order\022\r\n\005total\030\001 \001(\002\022\017" +
-      "\n\007current\030\002 \001(\002\"^\n\014SessionStart\022\021\n\ttotal" +
-      "_Num\030\001 \001(\005\022\020\n\010est_time\030\002 \001(\005\022\023\n\013MessageT" +
-      "ype\030\003 \001(\t\022\024\n\014resultOption\030\004 \001(\010\"4\n\rSessi" +
-      "onresult\022\023\n\013MessageType\030\001 \001(\t\022\016\n\006result\030" +
-      "\002 \001(\010B\034\n\032com.sasa5680.ProtoMessagesb\006pro" +
-      "to3"
+      "fo\030\004 \003(\0132\027.GeneralMSG.RoutingInfo\022\023\n\013Sto" +
+      "reOption\030\005 \001(\010\"c\n\013RoutingInfo\022\020\n\010senderI" +
+      "D\030\001 \001(\t\022\022\n\nsenderType\030\002 \001(\t\022\025\n\rdestinati" +
+      "onId\030\003 \001(\t\022\027\n\017destinationType\030\004 \001(\t\"\'\n\005o" +
+      "rder\022\r\n\005total\030\001 \001(\002\022\017\n\007current\030\002 \001(\002\"^\n\014" +
+      "SessionStart\022\021\n\ttotal_Num\030\001 \001(\005\022\020\n\010est_t" +
+      "ime\030\002 \001(\005\022\023\n\013MessageType\030\003 \001(\t\022\024\n\014result" +
+      "Option\030\004 \001(\010\"4\n\rSessionresult\022\023\n\013Message" +
+      "Type\030\001 \001(\t\022\016\n\006result\030\002 \001(\010B\034\n\032com.sasa56" +
+      "80.ProtoMessagesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4294,7 +4358,7 @@ public final class GeneralMSG {
     internal_static_GeneralMSG_General_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GeneralMSG_General_descriptor,
-        new java.lang.String[] { "Routing", "MessageType", "InnerMSG", "RoutingInfo", });
+        new java.lang.String[] { "Routing", "MessageType", "InnerMSG", "RoutingInfo", "StoreOption", });
     internal_static_GeneralMSG_RoutingInfo_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_GeneralMSG_RoutingInfo_fieldAccessorTable = new

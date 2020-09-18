@@ -12,6 +12,7 @@ message General{
 	string MessageType 					  = 2;
 	repeated google.protobuf.Any innerMSG = 3;
 	repeated RoutingInfo  routingInfo 	  = 4;
+	bool StoreOption					  = 5;
 }
 
 message RoutingInfo{
