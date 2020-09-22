@@ -37,12 +37,13 @@ public class Main {
 		d1.ID = "1001";
 		
 		Drone_Info d2 = new Drone_Info();
+		Drone_Info d3 = new Drone_Info();
 		
 		AndroidLoading al = new AndroidLoading();
 		
 		al.list.add(d1);
 		al.list.add(d2);
-		
+		al.list.add(d3);
 		try {
 			byte[] array = SerialClassConvertor.ClassToByte(al);
 			
@@ -50,6 +51,7 @@ public class Main {
 			
 			S2C_ex ex  = S2C_ex.newBuilder().setSerialClass(b).build();
 			
+			System.out.println(ex.toByteArray().length);
 			ByteString c= ex.getSerialClass();
 			
 			byte[] d = c.toByteArray();

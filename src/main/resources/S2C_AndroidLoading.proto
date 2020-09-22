@@ -2,9 +2,10 @@ syntax = "proto3";
 
 option java_package = "com.sasa5680.ProtoMessages.S2C";
 
-message S2C_Ping{
-		
-	bool dummy=1;
-	
-	string Time = 2;
+
+
+message S2C_AndroidLoading{
+
+	bytes androidLoading = 1;	
+
 }
