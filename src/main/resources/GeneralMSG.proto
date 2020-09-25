@@ -15,6 +15,13 @@ message General{
 	bool StoreOption					  = 5;
 }
 
+message SerializedMessage{
+
+	bool ZipOption	= 1;
+	bytes data		= 2;
+
+}
+
 message RoutingInfo{
 
 	string senderID 		= 1;

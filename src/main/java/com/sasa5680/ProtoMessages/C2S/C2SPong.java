@@ -19,9 +19,9 @@ public final class C2SPong {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool dummy = 1;</code>
+     * <code>fixed64 time = 1;</code>
      */
-    boolean getDummy();
+    long getTime();
   }
   /**
    * Protobuf type {@code C2S_Pong}
@@ -36,7 +36,7 @@ public final class C2SPong {
       super(builder);
     }
     private C2S_Pong() {
-      dummy_ = false;
+      time_ = 0L;
     }
 
     @java.lang.Override
@@ -63,9 +63,9 @@ public final class C2SPong {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 9: {
 
-              dummy_ = input.readBool();
+              time_ = input.readFixed64();
               break;
             }
             default: {
@@ -100,13 +100,13 @@ public final class C2SPong {
               com.sasa5680.ProtoMessages.C2S.C2SPong.C2S_Pong.class, com.sasa5680.ProtoMessages.C2S.C2SPong.C2S_Pong.Builder.class);
     }
 
-    public static final int DUMMY_FIELD_NUMBER = 1;
-    private boolean dummy_;
+    public static final int TIME_FIELD_NUMBER = 1;
+    private long time_;
     /**
-     * <code>bool dummy = 1;</code>
+     * <code>fixed64 time = 1;</code>
      */
-    public boolean getDummy() {
-      return dummy_;
+    public long getTime() {
+      return time_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -123,8 +123,8 @@ public final class C2SPong {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (dummy_ != false) {
-        output.writeBool(1, dummy_);
+      if (time_ != 0L) {
+        output.writeFixed64(1, time_);
       }
       unknownFields.writeTo(output);
     }
@@ -135,9 +135,9 @@ public final class C2SPong {
       if (size != -1) return size;
 
       size = 0;
-      if (dummy_ != false) {
+      if (time_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, dummy_);
+          .computeFixed64Size(1, time_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -155,8 +155,8 @@ public final class C2SPong {
       com.sasa5680.ProtoMessages.C2S.C2SPong.C2S_Pong other = (com.sasa5680.ProtoMessages.C2S.C2SPong.C2S_Pong) obj;
 
       boolean result = true;
-      result = result && (getDummy()
-          == other.getDummy());
+      result = result && (getTime()
+          == other.getTime());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -168,9 +168,9 @@ public final class C2SPong {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DUMMY_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getDummy());
+      hash = (37 * hash) + TIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTime());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -304,7 +304,7 @@ public final class C2SPong {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        dummy_ = false;
+        time_ = 0L;
 
         return this;
       }
@@ -332,7 +332,7 @@ public final class C2SPong {
       @java.lang.Override
       public com.sasa5680.ProtoMessages.C2S.C2SPong.C2S_Pong buildPartial() {
         com.sasa5680.ProtoMessages.C2S.C2SPong.C2S_Pong result = new com.sasa5680.ProtoMessages.C2S.C2SPong.C2S_Pong(this);
-        result.dummy_ = dummy_;
+        result.time_ = time_;
         onBuilt();
         return result;
       }
@@ -381,8 +381,8 @@ public final class C2SPong {
 
       public Builder mergeFrom(com.sasa5680.ProtoMessages.C2S.C2SPong.C2S_Pong other) {
         if (other == com.sasa5680.ProtoMessages.C2S.C2SPong.C2S_Pong.getDefaultInstance()) return this;
-        if (other.getDummy() != false) {
-          setDummy(other.getDummy());
+        if (other.getTime() != 0L) {
+          setTime(other.getTime());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -413,28 +413,28 @@ public final class C2SPong {
         return this;
       }
 
-      private boolean dummy_ ;
+      private long time_ ;
       /**
-       * <code>bool dummy = 1;</code>
+       * <code>fixed64 time = 1;</code>
        */
-      public boolean getDummy() {
-        return dummy_;
+      public long getTime() {
+        return time_;
       }
       /**
-       * <code>bool dummy = 1;</code>
+       * <code>fixed64 time = 1;</code>
        */
-      public Builder setDummy(boolean value) {
+      public Builder setTime(long value) {
         
-        dummy_ = value;
+        time_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool dummy = 1;</code>
+       * <code>fixed64 time = 1;</code>
        */
-      public Builder clearDummy() {
+      public Builder clearTime() {
         
-        dummy_ = false;
+        time_ = 0L;
         onChanged();
         return this;
       }
@@ -505,9 +505,9 @@ public final class C2SPong {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016C2S_Pong.proto\"\031\n\010C2S_Pong\022\r\n\005dummy\030\001 " +
-      "\001(\010B \n\036com.sasa5680.ProtoMessages.C2Sb\006p" +
-      "roto3"
+      "\n\016C2S_Pong.proto\"\030\n\010C2S_Pong\022\014\n\004time\030\001 \001" +
+      "(\006B \n\036com.sasa5680.ProtoMessages.C2Sb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -526,7 +526,7 @@ public final class C2SPong {
     internal_static_C2S_Pong_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_C2S_Pong_descriptor,
-        new java.lang.String[] { "Dummy", });
+        new java.lang.String[] { "Time", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

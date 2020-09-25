@@ -1431,6 +1431,549 @@ public final class GeneralMSG {
 
   }
 
+  public interface SerializedMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:GeneralMSG.SerializedMessage)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool ZipOption = 1;</code>
+     */
+    boolean getZipOption();
+
+    /**
+     * <code>bytes data = 2;</code>
+     */
+    com.google.protobuf.ByteString getData();
+  }
+  /**
+   * Protobuf type {@code GeneralMSG.SerializedMessage}
+   */
+  public  static final class SerializedMessage extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:GeneralMSG.SerializedMessage)
+      SerializedMessageOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SerializedMessage.newBuilder() to construct.
+    private SerializedMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SerializedMessage() {
+      zipOption_ = false;
+      data_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SerializedMessage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              zipOption_ = input.readBool();
+              break;
+            }
+            case 18: {
+
+              data_ = input.readBytes();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_GeneralMSG_SerializedMessage_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_GeneralMSG_SerializedMessage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage.class, com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage.Builder.class);
+    }
+
+    public static final int ZIPOPTION_FIELD_NUMBER = 1;
+    private boolean zipOption_;
+    /**
+     * <code>bool ZipOption = 1;</code>
+     */
+    public boolean getZipOption() {
+      return zipOption_;
+    }
+
+    public static final int DATA_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString data_;
+    /**
+     * <code>bytes data = 2;</code>
+     */
+    public com.google.protobuf.ByteString getData() {
+      return data_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (zipOption_ != false) {
+        output.writeBool(1, zipOption_);
+      }
+      if (!data_.isEmpty()) {
+        output.writeBytes(2, data_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (zipOption_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, zipOption_);
+      }
+      if (!data_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, data_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage)) {
+        return super.equals(obj);
+      }
+      com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage other = (com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage) obj;
+
+      boolean result = true;
+      result = result && (getZipOption()
+          == other.getZipOption());
+      result = result && getData()
+          .equals(other.getData());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ZIPOPTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getZipOption());
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code GeneralMSG.SerializedMessage}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:GeneralMSG.SerializedMessage)
+        com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_GeneralMSG_SerializedMessage_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_GeneralMSG_SerializedMessage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage.class, com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage.Builder.class);
+      }
+
+      // Construct using com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        zipOption_ = false;
+
+        data_ = com.google.protobuf.ByteString.EMPTY;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sasa5680.ProtoMessages.GeneralMSG.internal_static_GeneralMSG_SerializedMessage_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage getDefaultInstanceForType() {
+        return com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage build() {
+        com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage buildPartial() {
+        com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage result = new com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage(this);
+        result.zipOption_ = zipOption_;
+        result.data_ = data_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage) {
+          return mergeFrom((com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage other) {
+        if (other == com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage.getDefaultInstance()) return this;
+        if (other.getZipOption() != false) {
+          setZipOption(other.getZipOption());
+        }
+        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
+          setData(other.getData());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean zipOption_ ;
+      /**
+       * <code>bool ZipOption = 1;</code>
+       */
+      public boolean getZipOption() {
+        return zipOption_;
+      }
+      /**
+       * <code>bool ZipOption = 1;</code>
+       */
+      public Builder setZipOption(boolean value) {
+        
+        zipOption_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool ZipOption = 1;</code>
+       */
+      public Builder clearZipOption() {
+        
+        zipOption_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes data = 2;</code>
+       */
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+      /**
+       * <code>bytes data = 2;</code>
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        data_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes data = 2;</code>
+       */
+      public Builder clearData() {
+        
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:GeneralMSG.SerializedMessage)
+    }
+
+    // @@protoc_insertion_point(class_scope:GeneralMSG.SerializedMessage)
+    private static final com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage();
+    }
+
+    public static com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SerializedMessage>
+        PARSER = new com.google.protobuf.AbstractParser<SerializedMessage>() {
+      @java.lang.Override
+      public SerializedMessage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SerializedMessage(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SerializedMessage> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SerializedMessage> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sasa5680.ProtoMessages.GeneralMSG.SerializedMessage getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface RoutingInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:GeneralMSG.RoutingInfo)
       com.google.protobuf.MessageOrBuilder {
@@ -4297,6 +4840,11 @@ public final class GeneralMSG {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_GeneralMSG_General_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_GeneralMSG_SerializedMessage_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_GeneralMSG_SerializedMessage_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_GeneralMSG_RoutingInfo_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -4330,15 +4878,16 @@ public final class GeneralMSG {
       "\030\001 \001(\010\022\023\n\013MessageType\030\002 \001(\t\022&\n\010innerMSG\030" +
       "\003 \003(\0132\024.google.protobuf.Any\022,\n\013routingIn" +
       "fo\030\004 \003(\0132\027.GeneralMSG.RoutingInfo\022\023\n\013Sto" +
-      "reOption\030\005 \001(\010\"c\n\013RoutingInfo\022\020\n\010senderI" +
-      "D\030\001 \001(\t\022\022\n\nsenderType\030\002 \001(\t\022\025\n\rdestinati" +
-      "onId\030\003 \001(\t\022\027\n\017destinationType\030\004 \001(\t\"\'\n\005o" +
-      "rder\022\r\n\005total\030\001 \001(\002\022\017\n\007current\030\002 \001(\002\"^\n\014" +
-      "SessionStart\022\021\n\ttotal_Num\030\001 \001(\005\022\020\n\010est_t" +
-      "ime\030\002 \001(\005\022\023\n\013MessageType\030\003 \001(\t\022\024\n\014result" +
-      "Option\030\004 \001(\010\"4\n\rSessionresult\022\023\n\013Message" +
-      "Type\030\001 \001(\t\022\016\n\006result\030\002 \001(\010B\034\n\032com.sasa56" +
-      "80.ProtoMessagesb\006proto3"
+      "reOption\030\005 \001(\010\"4\n\021SerializedMessage\022\021\n\tZ" +
+      "ipOption\030\001 \001(\010\022\014\n\004data\030\002 \001(\014\"c\n\013RoutingI" +
+      "nfo\022\020\n\010senderID\030\001 \001(\t\022\022\n\nsenderType\030\002 \001(" +
+      "\t\022\025\n\rdestinationId\030\003 \001(\t\022\027\n\017destinationT" +
+      "ype\030\004 \001(\t\"\'\n\005order\022\r\n\005total\030\001 \001(\002\022\017\n\007cur" +
+      "rent\030\002 \001(\002\"^\n\014SessionStart\022\021\n\ttotal_Num\030" +
+      "\001 \001(\005\022\020\n\010est_time\030\002 \001(\005\022\023\n\013MessageType\030\003" +
+      " \001(\t\022\024\n\014resultOption\030\004 \001(\010\"4\n\rSessionres" +
+      "ult\022\023\n\013MessageType\030\001 \001(\t\022\016\n\006result\030\002 \001(\010" +
+      "B\034\n\032com.sasa5680.ProtoMessagesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4359,26 +4908,32 @@ public final class GeneralMSG {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GeneralMSG_General_descriptor,
         new java.lang.String[] { "Routing", "MessageType", "InnerMSG", "RoutingInfo", "StoreOption", });
-    internal_static_GeneralMSG_RoutingInfo_descriptor =
+    internal_static_GeneralMSG_SerializedMessage_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_GeneralMSG_SerializedMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_GeneralMSG_SerializedMessage_descriptor,
+        new java.lang.String[] { "ZipOption", "Data", });
+    internal_static_GeneralMSG_RoutingInfo_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_GeneralMSG_RoutingInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GeneralMSG_RoutingInfo_descriptor,
         new java.lang.String[] { "SenderID", "SenderType", "DestinationId", "DestinationType", });
     internal_static_GeneralMSG_order_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_GeneralMSG_order_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GeneralMSG_order_descriptor,
         new java.lang.String[] { "Total", "Current", });
     internal_static_GeneralMSG_SessionStart_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_GeneralMSG_SessionStart_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GeneralMSG_SessionStart_descriptor,
         new java.lang.String[] { "TotalNum", "EstTime", "MessageType", "ResultOption", });
     internal_static_GeneralMSG_Sessionresult_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_GeneralMSG_Sessionresult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GeneralMSG_Sessionresult_descriptor,

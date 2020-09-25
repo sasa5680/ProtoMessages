@@ -4,6 +4,5 @@ option java_package = "com.sasa5680.ProtoMessages.C2S";
 
 message C2S_Pong{
 
-	bool dummy = 1;
-
+	fixed64 time = 1;
 }

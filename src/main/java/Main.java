@@ -56,12 +56,14 @@ public class Main {
 			
 			byte[] d = c.toByteArray();
 			
+			
+			 AndroidLoading AL2 = (AndroidLoading) SerialClassConvertor.ByteToClass(d);
+					 
 			System.out.println(d.length);
 
 			
-			AndroidLoading al2 =  (AndroidLoading) SerialClassConvertor.ByteToClass(d);
 			
-			System.out.println(al.list.get(0).ID);
+			System.out.println(AL2.list.get(0).ID);
 
 			
 		} catch (IOException e) {
